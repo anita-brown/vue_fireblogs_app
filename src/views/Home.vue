@@ -50,9 +50,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.container {
+/* .container {
   padding-left: 100px;
-}
+} */
 .blog-card-wrap {
   h3 {
     font-weight: 300;
