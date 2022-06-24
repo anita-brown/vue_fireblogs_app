@@ -5,23 +5,21 @@
         Already have an account?
         <router-link class="router-link" :to="{ name: 'Login' }">Login</router-link>
       </p>
-      <h2>Login to FireBlogs</h2>
+      <h2>Create your FireBlog Account</h2>
       <div class="inputs">
         <div class="input">
           <input type="text" placeholder="First Name" v-model="firstName" />
           <user class="icon" />
         </div>
-      <div class="inputs">
+
         <div class="input">
           <input type="text" placeholder="Last Name" v-model="lastName" />
           <user class="icon" />
         </div>
-      <div class="inputs">
         <div class="input">
           <input type="text" placeholder="User Name" v-model="userName" />
           <user class="icon" />
         </div>
-      <div class="inputs">
         <div class="input">
           <input type="text" placeholder="Email" v-model="email" />
           <email class="icon" />
@@ -49,7 +47,22 @@ export default {
     password,
     user,
   },
+  data() {
+    return {
+      firstName: null,
+      lastName: null,
+      userName: null,
+      email: null,
+      password: null,
+    };
+  },
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.register {
+  h2 {
+    max-width: 350px;
+  }
+}
+</style>
