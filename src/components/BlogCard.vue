@@ -1,6 +1,6 @@
 <template>
   <div class="blog-card">
-    <div class="icons">
+    <div v-show="editPost" class="icons">
       <div class="icon">
         <Edit class="edit" />
       </div>
@@ -28,6 +28,11 @@ export default {
     Arrow,
     Edit,
     Delete,
+  },
+  computed: {
+    editPost() {
+      return this.$store.state.editPost;
+    },
   },
 };
 </script>
@@ -123,7 +128,7 @@ export default {
         color: rgba(48, 48, 48, 0.8);
       }
       .arrow {
-          width: 10px;
+        width: 10px;
       }
     }
   }
